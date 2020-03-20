@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Paper, Box, Grid, Typography, withStyles } from '@material-ui/core';
-import API from '../../../API';
+// import API from '../../../API';
 import BlockUi from 'react-block-ui';
 import 'react-block-ui/style.css';
 import Swal from 'sweetalert2';
@@ -123,48 +123,6 @@ class Login extends Component {
             }
             this.setState({blocking: false});
             this.props.history.push('/dashboard');
-            // API.post('api/auth/login/', form)
-            // .then(res => {
-            //     if(res.status === 200){                    
-            //         Swal.fire({
-            //             title: 'Success!',
-            //             icon: 'success',
-            //             text: 'Login Success.',
-            //             showConfirmButton: false,
-            //             timer: 1500
-            //         })
-            //         .then(() => {
-            //             API.defaults.headers['Authorization'] = "Bearer "+res.data.token;
-            //             localStorage.setItem('token', res.data.token);
-            //             localStorage.setItem('data', JSON.stringify(res.data.data));                    
-            //             this.props.history.push('/dashboard');
-            //         })
-            //         // console.log(res);                    
-            //     }else{
-            //         Swal.fire({  
-            //             title: 'Warning',  
-            //             icon: 'warning',  
-            //             text: 'Your ID Unauthorized.',  
-            //         });
-            //     }
-            //     this.setState({blocking: false});
-            // }).catch((error) => {
-            //     if(error && error.response && error.response.status === 401){
-            //         Swal.fire({  
-            //             title: 'Warning',  
-            //             icon: 'warning',  
-            //             text: 'Your ID Unauthorized.',  
-            //         });
-            //     }else{
-            //         Swal.fire({  
-            //             title: 'Error',  
-            //             icon: 'error',  
-            //             text: 'Please Check Your Network Connection.',  
-            //         });
-            //     }
-            //     // console.log(error.response);            
-            //     this.setState({blocking: false});
-            // });
         }else{
             Swal.fire({  
                 title: 'Warning',  
