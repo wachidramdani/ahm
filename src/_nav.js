@@ -85,11 +85,11 @@ export default {
           url: '#',
           icon: 'icon-droplet',
         },
-        {
-          name: 'User',
-          url: '/master/user',
-          icon: 'icon-users2',
-        },
+        // {
+        //   name: 'User',
+        //   url: '/master/user',
+        //   icon: 'icon-users2',
+        // },
         {
           name: 'Menu',
           url: '/master/menu',
