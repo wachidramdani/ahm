@@ -1,0 +1,350 @@
+// Variable overrides
+//----------------------material ui-----------------
+.app-header .dropdown-item {
+    min-width: 0 !important;
+}
+
+.MuiAvatar-root {
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.smallCheck {
+    font-size: 12px !important;
+    color: #333 !important;
+    margin-left: -5px !important;
+}
+
+.error_input {
+    float: right;
+    font-size: 12px;
+    margin-top: -45px;
+    margin-right: 10px;
+    color: red;
+}
+
+.error_input_sm {
+    float: right;
+    font-size: 12px;
+    margin-top: -25px;
+    margin-right: 10px;
+    color: red;
+}
+//----------------------header-----------------------
+.header-fixed .app-header {
+    background-color: #ffffff !important;
+}
+
+.app-header .navbar-toggler-icon {
+    // background-image: url('/assets/img/toggle.png') !important;
+    margin-top: 3px !important;
+}
+
+.img-avatar{
+    margin: 0 15px !important;
+}
+
+.name-bar{
+    text-transform: capitalize !important;
+}
+//----------------------sidebar----------------------
+.sidebar .sidebar-minimizer {
+    flex: 0 0 30px !important;
+}
+
+.sidebar .sidebar-minimizer::before {
+    height: 33px !important;
+    background-size: 16px !important;
+    background-image: url('/assets/img/left_arrow.png') !important;
+}
+
+.sidebar-minimized .sidebar .sidebar-minimizer {
+    height: 33px !important;
+}
+
+.scrollbar-container {
+    background-color: #262626 !important;
+}
+
+.sidebar .nav-link {
+    font-size: 12px !important;
+}
+//-----------------------footer-----------------------
+.app-footer {
+    flex: 0 0 30px !important;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    top: -2px !important;
+}
+//-----------------------content----------------------
+legend {
+    width: auto !important;
+}
+
+.breadcrumb {
+    margin-bottom: 15px !important;
+    background-color: #E92030 !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #fff !important;
+}
+
+.breadcrumb .breadcrumb-item a, .breadcrumb .breadcrumb-item.active {
+    color: #fff !important;
+}
+
+.main .container-fluid {
+    padding: 0 15px !important;
+}
+
+.textCpr{
+    font-size: 12px !important;
+    color: #333 !important;
+}
+
+.card-body-nopad {
+    padding: 0 !important;
+}
+
+.buttonTable {
+    margin-left: 15px !important;
+    float: left !important;
+}
+
+.buttonTable .btn-brand {
+    margin-right: 5px;
+}
+
+button:focus {outline:none !important;}
+
+.clear-both {
+    clear: both !important;
+}
+
+.card-header-filter {
+    padding: 4px 20px !important;
+}
+
+.scroll {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.scroll-title {
+    // padding: 20px !important;
+    font-weight: 700;
+}
+  
+.scroll-item {
+    width: 1200px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.custable{
+    border: 1px solid #c8ced3;
+}
+
+.custable th, .custable td{
+    border: 1px solid #c8ced3;
+    width: 45px;
+}
+
+.col-hidden { 
+    display: none !important;
+}
+
+.mr5px {
+    margin-right: 5px !important;
+}
+
+.mt10px {
+    margin-top: 10px !important;
+}
+
+.filterPage{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+table caption {
+    padding-top: 0 !important;
+    caption-side: top !important;
+}
+
+.table th, .table td {
+    padding: 4px 10px 4px 10px !important;
+    font-size: 12px !important;
+}
+
+.table td .form-control {
+    padding: 0px 5px !important;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    height: auto !important;
+    border: none !important;
+}
+
+.react-bs-table-bordered {
+    border-radius: 0 !important;
+}
+
+// .react-bs-table-container {
+//     margin-top: 15px !important;
+// }
+
+.react-bs-table-tool-bar {
+    margin-bottom: 15px !important;
+}
+
+td .btn {
+    padding: 2px 7px !important;
+    font-size: 12px !important;
+    line-height: 1rem !important;
+}
+
+td .btn i {
+    font-size: 12px !important;
+    margin: -5px !important;
+    line-height: 1rem !important;
+}
+
+.react-bs-table-container .react-bs-table-search-form .input-group-btn .react-bs-table-search-clear-btn{
+    padding: 4px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    font-size: 12px !important;
+}
+
+.react-bs-table-container .react-bs-table-search-form .form-control{
+    outline: none !important;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+}
+
+.react-bs-table-container .react-bs-table-search-form .input-group-btn .react-bs-table-search-clear-btn:focus{
+    outline: none !important;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+}
+
+.react-bs-table-csv-btn {
+    margin-left: 15px !important;
+}
+
+.react-bs-table-sizePerPage-dropdown .btn {
+    margin-left: 15px !important;
+    font-size: 12px !important;
+    padding: 4px 10px !important;
+    background-color: #fcfcfc !important;
+    float: left !important;
+    margin-bottom: 15px !important;
+}
+
+.react-bootstrap-table-page-btns-ul {
+    margin-right: 15px !important;
+}
+
+.react-bootstrap-table-page-btns-ul .page-link {
+    padding: 4px 10px !important;
+    font-size: 12px !important;
+}
+
+.react-bootstrap-table-page-btns-ul .page-link:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+}
+
+.pagTextTotal {
+    float: right !important;
+    font-size: 12px !important;
+}
+
+.imgTable {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: 1px solid #9acd32 !important;
+}
+
+.imgModal {
+    width: 265px !important;
+    height: 265px !important;
+}
+
+.spliter {
+    height: 430px !important;
+    margin-top: 50px !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+//----------------font------------------
+.fc555 {
+    color: #555 !important;
+}
+
+.fs22 {
+    font-size: 22px !important;
+}
+
+.fs12 {
+    font-size: 12px !important;
+}
+
+//---------------form-------------------
+.comForm {
+    width: 100% !important;
+}
+
+.comForm .MuiFormControl-root {
+    width: 100% !important;
+    margin-top: 10px !important;
+}
+
+.comForm .MuiInputLabel-root {
+    font-size: 14px !important;
+}
+
+.comForm .wdInput {
+    width: 100% !important;
+    font-size: 12px !important;
+}
+
+.comForm .MuiFormControlLabel-labelPlacementStart {
+    margin: 25px 0 0 !important;
+    color: #7e7e7e !important;
+}
+
+.comForm .PrivateSwitchBase-root-72  {
+    padding: 0 9px !important;
+}
+
+.btnFormSubmit {
+    width: 100% !important;
+    margin-top: 30px !important;
+    font-size: 12px !important;
+    line-height: 30px !important;
+}
+
+.btnFormSubmit i {
+    margin-top: 2px !important;
+    margin-right: 3px !important;
+}
+
+//---------------sweetalert2------------
+.swal2-popup .swal2-styled.swal2-confirm {
+    font-size: 12px !important;
+    color: #fcfcfc !important;
+    font-weight: normal !important;
+}
+
+.swal2-styled.swal2-cancel {
+    font-size: 12px !important;
+    color: #fcfcfc !important;
+    font-weight: normal !important;
+}
