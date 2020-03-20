@@ -4,6 +4,9 @@ const Dashboard = React.lazy(() => import('./views/Dashboard'));
 const NotFound = React.lazy(() => import('./views/Pages/Page404'));
 const MasterUser = React.lazy(() => import('./views/Master/User/User'));
 const MasterMenu = React.lazy(() => import('./views/Master/Menu/Menu'));
+const MasterFormula = React.lazy(() => import('./views/Master/Formula/Formula'));
+const MasterSku = React.lazy(() => import('./views/Master/Sku/Sku'));
+
 const Daily = React.lazy(() => import('./views/Transaction/Planning/Daily'));
 const Dds = React.lazy(() => import('./views/Transaction/Planning/Dds'));
 const SampleColor = React.lazy(() => import('./views/Transaction/Planning/SampleColor'));
@@ -64,6 +67,9 @@ const routes = [
   { path: '/master', exact: true, name: 'Master Data', component: MasterUser },
   { path: '/master/user', name: 'User', component: MasterUser },
   { path: '/master/menu', name: 'Menu', component: MasterMenu },
+  { path: '/master/formula', name: 'Formula', component: MasterFormula },
+  { path: '/master/sku', name: 'SKU', component: MasterSku },
+
   { path: '/um', exact: true, name: 'User Management', component: MasterUser },
 
   // { path: '/theme', exact: true, name: 'Theme', component: Colors },

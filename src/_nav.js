@@ -72,7 +72,7 @@ export default {
       children: [
         {
           name: 'Formula',
-          url: '#',
+          url: '/master/formula',
           icon: 'icon-magic-wand',
         },
         {
@@ -82,7 +82,7 @@ export default {
         },
         {
           name: 'SKU',
-          url: '#',
+          url: '/master/sku',
           icon: 'icon-droplet',
         },
         // {
