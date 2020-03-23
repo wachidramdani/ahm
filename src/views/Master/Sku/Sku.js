@@ -47,9 +47,8 @@ class Sku extends Component {
     var headerColumns = [
       { inputType: INPUT.TEXT_FIELD, label: "Tipe Motor", name: "tipeMotor" },
       { inputType: INPUT.TEXT_FIELD, label: "Warna Motor", name: "warnaMotor" },
-      { inputType: INPUT.TEXT_FIELD, label: "Kode Warna", name: "kdWarna" },
+      { inputType: INPUT.TEXT_FIELD, label: "Kode Warna", name: "kodeWarna" },
       // { inputType: INPUT.TEXT_FIELD, label: "", name: "tgl", type: "date" },
-      this.state.date
     ];
     this.setState({ listForm: this.state.listForm.concat(headerColumns) });
   }
@@ -86,16 +85,6 @@ class Sku extends Component {
         return listForm;
       });
     }
-
-      //-----tanggal-----
-    // if(!dataForm.tgl || dataForm.tgl === undefined){
-    //     formIsValid = false;
-    //     this.setState(prevState => {
-    //       let listForm = { ...prevState.listForm };
-    //       listForm[2].error = true;         
-    //       return listForm;
-    //     });
-    //   }
       
     return formIsValid;
   }
@@ -115,7 +104,7 @@ class Sku extends Component {
       const form = {
           warnaMotor: dataForm.warnaMotor,
           tipeMotor: dataForm.tipeMotor,
-          tgl: dataForm.tgl,
+          kodeWarna: dataForm.kodeWarna,
       }
       Swal.fire({
         title: 'Tambah SKU',
@@ -216,21 +205,18 @@ class Sku extends Component {
                   confirmButtonColor: '#3085d6',
                   showCancelButton: true,
                 }).then((result) => {
-                  if (result.value) {
-                    // API.delete('api/auth/menu/'+val)
-                    // .then(res => {
-                    //     if(res.status === 200){                    
-                            Swal.fire({
-                              title: 'Succes',
-                              icon: 'success',
-                              text: 'Delete Succes.',
-                              showConfirmButton: false,
-                              timer: 1500
-                            })
-                            .then(() => {
-                              this.setBody();
-                            })
-                            this.setState({blocking: false});                    
+                  if (result.value) {                   
+                    Swal.fire({
+                      title: 'Succes',
+                      icon: 'success',
+                      text: 'Delete Succes.',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
+                    .then(() => {
+                      this.setBody();
+                    })
+                    this.setState({blocking: false});                    
 
                   }else{
                     this.setState({blocking: false});
@@ -250,7 +236,6 @@ class Sku extends Component {
   //-----end table-----
 
   render() {
-    console.log(this.state.date);
     return (
       <div className="animated fadeIn">
         <BlockUi tag="div" blocking={this.state.blocking}>
