@@ -11,6 +11,10 @@ import 'react-block-ui/style.css';
 class Sku extends Component {
   constructor(props) {
     super(props);
+
+    var today = new Date(),
+        date = ("0" + today.getDate()).slice(-2) + '-' + ("0" + (today.getMonth() + 1)).slice(-2) + '-' + today.getFullYear();
+        
     this.state = {
       fadeIn: true,
       listForm: [],
@@ -21,6 +25,7 @@ class Sku extends Component {
       modalTitle: '',
       addModal: false,
       errors: {},
+      date: date
     };   
     this.toggleImgModal = this.toggleImgModal.bind(this);
     this.toggleAddModal = this.toggleAddModal.bind(this);
@@ -43,7 +48,8 @@ class Sku extends Component {
       { inputType: INPUT.TEXT_FIELD, label: "Tipe Motor", name: "tipeMotor" },
       { inputType: INPUT.TEXT_FIELD, label: "Warna Motor", name: "warnaMotor" },
       { inputType: INPUT.TEXT_FIELD, label: "Kode Warna", name: "kdWarna" },
-      { inputType: INPUT.TEXT_FIELD, label: "", name: "tgl", type: "date" }
+      // { inputType: INPUT.TEXT_FIELD, label: "", name: "tgl", type: "date" },
+      this.state.date
     ];
     this.setState({ listForm: this.state.listForm.concat(headerColumns) });
   }
@@ -67,6 +73,16 @@ class Sku extends Component {
       this.setState(prevState => {
         let listForm = { ...prevState.listForm };
         listForm[1].error = true;         
+        return listForm;
+      });
+    }
+
+    //-----kode warna-----
+    if(!dataForm.kodeWarna || dataForm.kodeWarna === undefined){
+      formIsValid = false;
+      this.setState(prevState => {
+        let listForm = { ...prevState.listForm };
+        listForm[2].error = true;         
         return listForm;
       });
     }
@@ -234,6 +250,7 @@ class Sku extends Component {
   //-----end table-----
 
   render() {
+    console.log(this.state.date);
     return (
       <div className="animated fadeIn">
         <BlockUi tag="div" blocking={this.state.blocking}>
@@ -258,6 +275,7 @@ class Sku extends Component {
           <BlockUi tag="div" blocking={this.state.blocking_modal}>
             <ModalHeader toggle={ this.toggleAddModal }>Register SKU</ModalHeader>
             <ModalBody>
+              <label>Tanggal :</label> <b>{this.state.date}</b>
               <CommonFormPopUp action={ this.actionForm } list={ this.state.listForm } />
             </ModalBody>
           </BlockUi>
