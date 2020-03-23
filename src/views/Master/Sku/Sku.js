@@ -101,7 +101,7 @@ class Sku extends Component {
           tgl: dataForm.tgl,
       }
       Swal.fire({
-        title: 'Register User',
+        title: 'Tambah SKU',
         text: "Are you sure your data is correct?",
         icon: 'warning',
         cancelButtonColor: '#d33',
@@ -190,8 +190,8 @@ class Sku extends Component {
       case 'delete':
                 this.setState({blocking: true});
                 Swal.fire({
-                  title: 'Delete User',
-                  text: "Are you sure to delete this user?",
+                  title: 'Delete SKU',
+                  text: "Are you sure to delete this SKU?",
                   icon: 'warning',
                   cancelButtonColor: '#d33',
                   confirmButtonText: 'Yes!',
@@ -203,9 +203,9 @@ class Sku extends Component {
                     // .then(res => {
                     //     if(res.status === 200){                    
                             Swal.fire({
-                              title: 'Failed!',
+                              title: 'Succes',
                               icon: 'success',
-                              text: 'Delete Failed.',
+                              text: 'Delete Succes.',
                               showConfirmButton: false,
                               timer: 1500
                             })
@@ -239,7 +239,7 @@ class Sku extends Component {
             <Col xs="12" sm="12" md="12">
               <Card className="card-accent-primary">
                 <CardHeader>
-                  <i className="icon-users2"></i>Master Sku
+                  <i className="icon-droplet"></i>Master Sku
                 </CardHeader>
                   <CardBody className="card-body-nopad mt10px">
                     <CommonTable 
