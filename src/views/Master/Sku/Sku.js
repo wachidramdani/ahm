@@ -241,7 +241,7 @@ class Sku extends Component {
             <Col xs="12" sm="12" md="12">
               <Card className="card-accent-primary">
                 <CardHeader>
-                  <i className="icon-droplet"></i>Master Sku
+                  <i className="icon-droplet"></i>Sku Management
                 </CardHeader>
                   <CardBody className="card-body-nopad mt10px">
                     <CommonTable 
@@ -256,7 +256,7 @@ class Sku extends Component {
         </BlockUi>
         <Modal isOpen={ this.state.addModal } toggle={ this.toggleAddModal } className='modal-dialog modal-info' backdrop="static">
           <BlockUi tag="div" blocking={this.state.blocking_modal}>
-            <ModalHeader toggle={ this.toggleAddModal }>Tambah SKU</ModalHeader>
+            <ModalHeader toggle={ this.toggleAddModal }>Register SKU</ModalHeader>
             <ModalBody>
               <CommonFormPopUp action={ this.actionForm } list={ this.state.listForm } />
             </ModalBody>
