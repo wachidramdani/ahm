@@ -42,6 +42,7 @@ class Sku extends Component {
     var headerColumns = [
       { inputType: INPUT.TEXT_FIELD, label: "Tipe Motor", name: "tipeMotor" },
       { inputType: INPUT.TEXT_FIELD, label: "Warna Motor", name: "warnaMotor" },
+      { inputType: INPUT.TEXT_FIELD, label: "Kode Warna", name: "kdWarna" },
       { inputType: INPUT.TEXT_FIELD, label: "", name: "tgl", type: "date" }
     ];
     this.setState({ listForm: this.state.listForm.concat(headerColumns) });
@@ -167,6 +168,7 @@ class Sku extends Component {
       { width: "100", title: "No", dataField: "no", headerAlign: POSITION.CENTER, dataAlign: POSITION.CENTER, dataSort: true },
       { width: "150", title: "Tipe Motor", dataField: "tipeMotor", headerAlign: POSITION.CENTER, dataAlign: POSITION.LEFT, dataSort: true, tdStyle: {whiteSpace: 'normal'} },
       { width: "150", title: "Warna Motor", dataField: "warnaMotor", headerAlign: POSITION.CENTER, dataAlign: POSITION.LEFT, dataSort: true, tdStyle: {whiteSpace: 'normal'} },
+      { width: "150", title: "Kode Warna", dataField: "kodeWarna", headerAlign: POSITION.CENTER, dataAlign: POSITION.LEFT, dataSort: true, tdStyle: {whiteSpace: 'normal'} },
       { width: "150", title: "Tanggal Isi", dataField: "tgl", headerAlign: POSITION.CENTER, dataAlign: POSITION.LEFT, dataSort: true, tdStyle: {whiteSpace: 'normal'} },
       { width: "100", title: "Action", dataField: "action", headerAlign: POSITION.CENTER, dataAlign: POSITION.CENTER, dataFormat: this.actionTable.bind(this) }
     ];
@@ -176,9 +178,9 @@ class Sku extends Component {
   setBody() {
     this.setState({blocking: true});
     this.setState({ datas: [
-      {id: 1, no: 1, tipeMotor:'Scoppy', warnaMotor:'Merah', tgl:'20/3/2020'},
-      {id:2, no: 2, tipeMotor:'Vario', warnaMotor:'Hitam', tgl:'22/3/2020'},
-      {id:3, no: 3, tipeMotor:'Supra X 125', warnaMotor:'Silver', tgl:'21/3/2020'}
+      {id: 1, no: 1, tipeMotor:'Scoppy', warnaMotor:'Merah',kodeWarna:'SCRD2', tgl:'20/3/2020'},
+      {id:2, no: 2, tipeMotor:'Vario', warnaMotor:'Hitam', kodeWarna:'VRBK1', tgl:'22/3/2020'},
+      {id:3, no: 3, tipeMotor:'Supra X 125', warnaMotor:'Silver', kodeWarna:'SPXWHT3', tgl:'21/3/2020'}
     ] }, () => this.setState({blocking: false}));
   }
 

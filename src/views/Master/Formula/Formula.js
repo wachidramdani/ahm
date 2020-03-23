@@ -324,7 +324,7 @@ class Formula extends Component {
             <Col xs="12" sm="12" md="12">
               <Card className="card-accent-primary">
                 <CardHeader>
-                  <i className="icon-users2"></i>Formula Management
+                  <i className="icon-magic-wand"></i>Formula Management
                 </CardHeader>
                   <CardBody className="card-body-nopad mt10px">
                     <CommonTable 
