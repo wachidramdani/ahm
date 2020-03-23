@@ -13,6 +13,10 @@ import API from '../../../API';
 class Formula extends Component {
   constructor(props) {
     super(props);
+
+    var today = new Date(),
+    date = ("0" + today.getDate()).slice(-2) + '-' + ("0" + (today.getMonth() + 1)).slice(-2) + '-' + today.getFullYear();
+
     this.state = {
       fadeIn: true,
       listForm: [],
@@ -23,6 +27,7 @@ class Formula extends Component {
       modalTitle: '',
       addModal: false,
       errors: {},
+      date: date
     };   
     this.toggleImgModal = this.toggleImgModal.bind(this);
     this.toggleAddModal = this.toggleAddModal.bind(this);
@@ -341,6 +346,7 @@ class Formula extends Component {
           <BlockUi tag="div" blocking={this.state.blocking_modal}>
             <ModalHeader toggle={ this.toggleAddModal }>Register Formula</ModalHeader>
             <ModalBody>
+              <label>Tanggal :</label> <b>{this.state.date}</b>
               <CommonFormPopUp action={ this.actionForm } list={ this.state.listForm } />
             </ModalBody>
           </BlockUi>
